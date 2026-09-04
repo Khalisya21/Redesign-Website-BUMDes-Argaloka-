@@ -1,0 +1,10 @@
+{
+  "description": "A modern, responsive landing page for BUMDes Argaloka, showcasing local products, tourism, and community initiatives to enhance village independence and prosperity.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
