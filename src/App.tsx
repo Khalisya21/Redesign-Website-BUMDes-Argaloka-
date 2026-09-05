@@ -776,9 +776,22 @@ function OrgChart() {
   const cx = (k: keyof typeof n) => n[k].cx
 
   return (
-    <div style={{ overflowX: "auto", paddingBottom: "4px" }}>
-      <div style={{ position: "relative", width: `${W}px`, height: `${H}px` }}>
-        {/* ── SVG connector lines ── */}
+<div
+      style={{
+        overflowX: "auto",
+        paddingBottom: "4px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          width: `${W}px`,
+          height: `${H}px`,
+          flexShrink: 0,
+        }}
+      >        {/* ── SVG connector lines ── */}
         <svg
           viewBox={`0 0 ${W} ${H}`}
           style={{
@@ -1941,26 +1954,29 @@ function GaleriSection() {
           </h2>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {/* Ganti dari CSS columns (masonry) ke CSS Grid supaya rapi & center */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
           {GALERI.map((img, i) => (
             <div
               key={i}
-              className="break-inside-avoid rounded-2xl overflow-hidden cursor-pointer group"
+              className="w-full rounded-2xl overflow-hidden cursor-pointer group"
               onClick={() => setSelected(img)}
-              style={{ border: "1px solid rgba(107,158,94,0.15)" }}
+              style={{
+                border: "1px solid rgba(107,158,94,0.15)",
+                aspectRatio: i % 3 === 0 ? "3 / 4" : "4 / 3", // variasi tinggi tetap ada
+              }}
             >
               <img
                 src={img}
                 alt={`Galeri ${i + 1}`}
-                className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ height: i % 3 === 0 ? "220px" : "160px" }}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* Lightbox tetap sama, tidak perlu diubah */}
       {selected && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
