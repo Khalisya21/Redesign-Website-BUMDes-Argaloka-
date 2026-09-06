@@ -49,7 +49,7 @@ const PRODUK_HUKUM: { no: string; title: string; tahun: string; file: string }[]
 function Logo() {
   return (
     <img
-      src="/src/imports/logo_bumdes.jpeg"
+      src="/images/logo_bumdes.jpeg"
       alt="BUMDes Argaloka Desa Sanggang"
       style={{ height: "44px", width: "auto", objectFit: "contain" }}
     />
@@ -284,7 +284,7 @@ function HeroSection() {
       <div
         className="absolute inset-0 bg-[#1a3a0e]"
         style={{
-          backgroundImage: `url(/src/imports/duren.jpeg)`,
+          backgroundImage: `url(/images/duren.jpeg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -446,7 +446,7 @@ function OrgChart() {
 
   return (
     <div style={{ overflowX: "auto", paddingBottom: "4px" }}>
-      <div style={{ position: "relative", width: `${W}px`, height: `${H}px` }}>
+      <div style={{ position: "relative", width: `${W}px`, height: `${H}px`, margin: "0 auto" }}>
         {/* ── SVG connector lines ── */}
         <svg
           viewBox={`0 0 ${W} ${H}`}
@@ -1404,7 +1404,7 @@ function KetahananSection() {
               name: "Omah Jamur",
               icon: "🍄",
               desc: "Pusat budidaya jamur tiram dan jamur merang secara intensif. Produksi jamur segar berkualitas tinggi untuk kebutuhan pasar lokal dan regional.",
-              img: "/src/imports/omah-jamur-landscape.png",
+              img: "/images/omah-jamur-landscape.png",
               features: [
                 "Budidaya jamur tiram & merang",
                 "Produksi baglog mandiri",
@@ -1614,23 +1614,22 @@ function GaleriSection() {
           </h2>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {galeri.map((item, i) => (
-            <div
-              key={item.id ?? i}
-              className="break-inside-avoid rounded-2xl overflow-hidden cursor-pointer group"
-              onClick={() => setSelected(item.url)}
-              style={{ border: "1px solid rgba(107,158,94,0.15)" }}
-            >
-              <img
-                src={item.url}
-                alt={item.caption || `Galeri ${i + 1}`}
-                className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ height: i % 3 === 0 ? "220px" : "160px" }}
-              />
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  {galeri.map((item, i) => (
+    <div
+      key={item.id ?? i}
+      className="rounded-2xl overflow-hidden cursor-pointer group aspect-square"
+      onClick={() => setSelected(item.url)}
+      style={{ border: "1px solid rgba(107,158,94,0.15)" }}
+    >
+      <img
+        src={item.url}
+        alt={item.caption || `Galeri ${i + 1}`}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  ))}
+</div>
       </div>
 
       {/* Lightbox */}
@@ -2176,7 +2175,7 @@ function MainSite() {
       <section className="py-12 lg:py-16" style={{ background: "#ede7d9" }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <img
-            src="/src/imports/Salinan_Tambahkan_subjudul.png"
+            src="/images/Salinan_Tambahkan_subjudul.png"
             alt="Paket Wisata Eduwisata Desa Sanggang"
             className="w-full rounded-3xl shadow-xl"
             style={{ border: "1px solid rgba(107,158,94,0.2)" }}
