@@ -446,7 +446,7 @@ function OrgChart() {
 
   return (
     <div style={{ overflowX: "auto", paddingBottom: "4px" }}>
-      <div style={{ position: "relative", width: `${W}px`, height: `${H}px` }}>
+      <div style={{ position: "relative", width: `${W}px`, height: `${H}px`, margin: "0 auto" }}>
         {/* ── SVG connector lines ── */}
         <svg
           viewBox={`0 0 ${W} ${H}`}
@@ -1614,23 +1614,22 @@ function GaleriSection() {
           </h2>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-          {galeri.map((item, i) => (
-            <div
-              key={item.id ?? i}
-              className="break-inside-avoid rounded-2xl overflow-hidden cursor-pointer group"
-              onClick={() => setSelected(item.url)}
-              style={{ border: "1px solid rgba(107,158,94,0.15)" }}
-            >
-              <img
-                src={item.url}
-                alt={item.caption || `Galeri ${i + 1}`}
-                className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                style={{ height: i % 3 === 0 ? "220px" : "160px" }}
-              />
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  {galeri.map((item, i) => (
+    <div
+      key={item.id ?? i}
+      className="rounded-2xl overflow-hidden cursor-pointer group aspect-square"
+      onClick={() => setSelected(item.url)}
+      style={{ border: "1px solid rgba(107,158,94,0.15)" }}
+    >
+      <img
+        src={item.url}
+        alt={item.caption || `Galeri ${i + 1}`}
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  ))}
+</div>
       </div>
 
       {/* Lightbox */}
