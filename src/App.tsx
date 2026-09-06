@@ -49,7 +49,7 @@ const PRODUK_HUKUM: { no: string; title: string; tahun: string; file: string }[]
 function Logo() {
   return (
     <img
-      src="/src/imports/logo_bumdes.jpeg"
+      src="/images/logo_bumdes.jpeg"
       alt="BUMDes Argaloka Desa Sanggang"
       style={{ height: "44px", width: "auto", objectFit: "contain" }}
     />
@@ -1404,7 +1404,7 @@ function KetahananSection() {
               name: "Omah Jamur",
               icon: "🍄",
               desc: "Pusat budidaya jamur tiram dan jamur merang secara intensif. Produksi jamur segar berkualitas tinggi untuk kebutuhan pasar lokal dan regional.",
-              img: "/src/imports/omah-jamur-landscape.png",
+              img: "/images/omah-jamur-landscape.png",
               features: [
                 "Budidaya jamur tiram & merang",
                 "Produksi baglog mandiri",
@@ -2176,7 +2176,7 @@ function MainSite() {
       <section className="py-12 lg:py-16" style={{ background: "#ede7d9" }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <img
-            src="/src/imports/Salinan_Tambahkan_subjudul.png"
+            src="/images/Salinan_Tambahkan_subjudul.png"
             alt="Paket Wisata Eduwisata Desa Sanggang"
             className="w-full rounded-3xl shadow-xl"
             style={{ border: "1px solid rgba(107,158,94,0.2)" }}
