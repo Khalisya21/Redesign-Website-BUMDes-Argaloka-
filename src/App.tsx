@@ -284,7 +284,7 @@ function HeroSection() {
       <div
         className="absolute inset-0 bg-[#1a3a0e]"
         style={{
-          backgroundImage: `url(/src/imports/duren.jpeg)`,
+          backgroundImage: `url(/images/duren.jpeg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
