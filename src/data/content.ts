@@ -27,11 +27,11 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
     name: "Peyek Sedaya",
     desc: "Camilan tradisional khas Indonesia dari adonan peyek yang renyah dan gurih. Cocok sebagai camilan sehari-hari maupun pelengkap makanan.",
     imgs: [
-      "/src/imports/ukuran_besar.png",
-      "/src/imports/ukuran_kecil.png",
-      "/src/imports/varian_bayam.png",
-      "/src/imports/varian_kacang___rebon.png",
-      "/src/imports/varian_kacang.png",
+      "/images/ukuran_besar.png",
+      "/images/ukuran_kecil.png",
+      "/images/varian_bayam.png",
+      "/images/varian_kacang___rebon.png",
+      "/images/varian_kacang.png",
     ],
     tag: "Camilan",
     varian: ["Peyek Kacang", "Peyek Rebon", "Peyek Bayam"],
@@ -44,7 +44,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Legondo Bu Tarti",
     desc: "Jajanan tradisional dengan cita rasa manis dan tekstur lembut. Dibuat langsung setelah pesanan diterima agar selalu fresh.",
-    imgs: ["/src/imports/legondo.png"],
+    imgs: ["/images/legondo.png"],
     tag: "Jajanan",
     ukuran: ["10 pcs / kemasan"],
     keunggulan: [
@@ -60,10 +60,10 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
     name: "Fayyaz Food (Tape)",
     desc: "Fayyaz Food menjual Tape, olahan singkong fermentasi tradisional dengan rasa manis, legit, sedikit asam, tekstur lembut, dan aroma khas fermentasi. Cocok dimakan langsung atau diolah jadi tape goreng, kolak, dessert, dan jajanan tradisional.",
     imgs: [
-      "/src/imports/ukuran_besar-1.png",
-      "/src/imports/ukuran_kecil-1.png",
-      "/src/imports/detail_ukuran_besar.png",
-      "/src/imports/detail_ukuran_kecil.png",
+      "/images/ukuran_besar-1.png",
+      "/images/ukuran_kecil-1.png",
+      "/images/detail_ukuran_besar.png",
+      "/images/detail_ukuran_kecil.png",
     ],
     tag: "Makanan",
     harga: ["Rp 12.000 (± 500–600 gr)", "Rp 18.000 (± 1,2–1,3 kg)"],
@@ -84,10 +84,10 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
     name: "Bolu Tiwul Digtaz",
     desc: "Bolu berbahan dasar tiwul dengan tekstur lembut dan cita rasa khas, cocok sebagai camilan maupun oleh-oleh khas Desa Sanggang.",
     imgs: [
-      "/src/imports/pandan_besar.png",
-      "/src/imports/pandan_kecil.png",
-      "/src/imports/coklat_lumer.png",
-      "/src/imports/keju_rainbow.png",
+      "/images/pandan_besar.png",
+      "/images/pandan_kecil.png",
+      "/images/coklat_lumer.png",
+      "/images/keju_rainbow.png",
     ],
     tag: "Bakeri",
     varian: ["Original", "Pandan", "Cokelat"],
@@ -109,7 +109,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Kacang Sangrai & Getuk Bu Fitri",
     desc: "Dua camilan tradisional khas Bu Fitri: Kacang Sangrai yang renyah gurih dan Getuk Talas dengan cita rasa manis lembut khas pedesaan.",
-    imgs: ["/src/imports/kacang.png", "/src/imports/getuk_talas.png"],
+    imgs: ["/images/kacang.png", "/images/getuk_talas.png"],
     tag: "Jajanan",
     varian: ["Kacang Sangrai", "Getuk Talas"],
     keunggulan: [
@@ -124,7 +124,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Sagon",
     desc: "Camilan tradisional khas Desa Sanggang berbahan dasar ketan dan kelapa, dipanggang hingga menghasilkan tekstur renyah dan cita rasa gurih yang khas.",
-    imgs: ["/src/imports/sagon.jpg"],
+    imgs: ["/images/sagon.jpg"],
     tag: "Jajanan",
     keunggulan: [
       "Bahan ketan & kelapa pilihan",
@@ -141,7 +141,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Pentol Kuah",
     desc: "Diolah dari bahan-bahan pilihan, disajikan dengan kuah berbumbu gurih. Tekstur pentol kenyal dengan kuah nikmat, cocok sebagai makanan ringan maupun hidangan sehari-hari terutama saat hangat.",
-    imgs: ["/src/imports/pentol-kuah.png"],
+    imgs: ["/images/pentol-kuah.png"],
     tag: "Kuliner",
     keunggulan: ["Pentol kenyal", "Kuah gurih berbumbu", "Nikmat saat hangat"],
     simpan: "Segera dikonsumsi",
@@ -151,7 +151,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Getuk Cenil",
     desc: "Jajanan khas Desa Sanggang berbahan dasar singkong, diolah menjadi camilan kenyal dengan rasa singkong yang unik dan autentik.",
-    imgs: ["/src/imports/getuk_cenil.jpg"],
+    imgs: ["/images/getuk_cenil.jpg"],
     tag: "Jajanan",
     keunggulan: [
       "Bahan singkong lokal",
@@ -165,7 +165,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Telur Asin",
     desc: "Berbahan dasar telur bebek pilihan, diolah hingga menghasilkan cita rasa gurih dan asin yang pas. Berkualitas dan higienis.",
-    imgs: ["/src/imports/telor_asin.jpg"],
+    imgs: ["/images/telor_asin.jpg"],
     tag: "Makanan",
     keunggulan: [
       "Telur bebek pilihan",
@@ -183,7 +183,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Jamu Tradisional",
     desc: "Minuman tradisional dari bahan herbal dan rempah pilihan, diolah secara tradisional memanfaatkan tanaman herbal lokal Desa Sanggang untuk kesehatan.",
-    imgs: ["/src/imports/jamu.png"],
+    imgs: ["/images/jamu.png"],
     tag: "Minuman",
     keunggulan: ["Bahan herbal lokal", "Diolah tradisional", "Menyehatkan"],
     simpan: "1–2 hari",
@@ -196,7 +196,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Keripik Singkong",
     desc: "Makanan ringan berbahan dasar singkong lokal Desa Sanggang, diolah menjadi keripik renyah dan gurih yang cocok sebagai camilan kapan saja.",
-    imgs: ["/src/imports/keripik-singkong.jpeg"],
+    imgs: ["/images/keripik-singkong.jpeg"],
     tag: "Camilan",
     keunggulan: ["Singkong lokal pilihan", "Renyah & gurih", "Camilan praktis"],
     simpan: "2–4 minggu",
@@ -206,7 +206,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Bakso",
     desc: "Kuliner favorit khas Sukoharjo, dikenal dengan cita rasa berdaging, gurih, dan kenyal. Selalu disajikan hangat dengan kuah kaldu segar.",
-    imgs: ["/src/imports/bakso.jpg"],
+    imgs: ["/images/bakso.jpg"],
     tag: "Kuliner",
     keunggulan: ["Daging sapi pilihan", "Kenyal & gurih", "Disajikan hangat"],
     simpan: "Segera dikonsumsi",
@@ -216,7 +216,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Soto Sapi",
     desc: "Soto Sapi khas Sukoharjo dengan cita rasa gurih dan segar dari kuah rempah pilihan. Sajian hangat yang mengenyangkan dan menggugah selera.",
-    imgs: ["/src/imports/soto.jpg"],
+    imgs: ["/images/soto.jpg"],
     tag: "Kuliner",
     keunggulan: ["Kuah rempah pilihan", "Gurih & segar", "Daging sapi empuk"],
     simpan: "Segera dikonsumsi",
@@ -229,7 +229,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Gethuk Crispy",
     desc: "Inovasi olahan pangan lokal Desa Sanggang yang mengolah singkong menjadi camilan renyah dan lezat. Perpaduan tradisi dan kreasi modern.",
-    imgs: ["/src/imports/gethuk_crispy.png"],
+    imgs: ["/images/gethuk_crispy.png"],
     tag: "Camilan",
     keunggulan: [
       "Inovasi olahan singkong",
@@ -243,7 +243,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Jajanan Pasar",
     desc: "Aneka kudapan tradisional khas Nusantara, mulai dari kue basah seperti risol dan sosis solo. Cocok untuk berbagai acara dan kebutuhan sehari-hari.",
-    imgs: ["/src/imports/jajanan-pasar.png"],
+    imgs: ["/images/jajanan-pasar.png"],
     tag: "Jajanan",
     varian: ["Risol", "Sosis Solo"],
     keunggulan: [
@@ -258,7 +258,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Arang",
     desc: "Dihasilkan dari kayu keras (mahoni, sonokeling, kasia) dan limbah kayu glondongan, diolah menjadi arang berkualitas dengan daya bakar baik dan tahan lama. Untuk kebutuhan bahan bakar rumah tangga maupun industri kecil.",
-    imgs: ["/src/imports/arang.jpg"],
+    imgs: ["/images/arang.jpg"],
     tag: "Komoditas",
     keunggulan: ["Kayu keras pilihan", "Daya bakar tinggi", "Tahan lama"],
     simpan: "Tahan lama (simpan kering)",
@@ -274,7 +274,7 @@ export const DEFAULT_UMKM_PRODUCTS: UMKMProduct[] = [
   {
     name: "Mebel",
     desc: "Kerajinan furnitur rumah dengan kualitas terjamin dan desain fungsional. Produk kayu kokoh dan elegan untuk interior rumah, dikerjakan oleh pengrajin lokal berpengalaman.",
-    imgs: ["/src/imports/mebel.jpg"],
+    imgs: ["/images/mebel.jpg"],
     tag: "Kerajinan",
     keunggulan: [
       "Kayu berkualitas",
@@ -299,17 +299,17 @@ export const DEFAULT_WISATA: Wisata[] = [
   {
     name: "Embung Cerme",
     desc: "Waduk mini nan indah di tengah persawahan, spot favorit memancing dan bersantai menikmati senja.",
-    img: "/src/imports/embung_cerme.jpeg",
+    img: "/images/embung_cerme.jpeg",
   },
   {
     name: "Greenhouse Melon",
     desc: "Wisata agro modern, petik melon langsung dari lahan greenhouse yang asri dan bersih.",
-    img: "/src/imports/melon_bumdes.jpeg",
+    img: "/images/melon_bumdes.jpeg",
   },
   {
     name: "Sawah Dukuh Tawing",
     desc: "Kawasan persawahan terasering indah yang menawarkan panorama alam hijau nan asri layaknya suasana pedesaan di Ubud, Bali. Terhampar subur di lereng perbukitan, destinasi ini menyajikan pemandangan sawah bertingkat yang menyejukkan mata sekaligus udara pedesaan yang bersih dan tenang. Pemerintah Kabupaten Sukoharjo kini tengah mengembangkannya menjadi kawasan agrowisata edukatif — pengunjung bisa menikmati keindahan alam, berswafoto, wisata kuliner, serta belajar langsung tentang dunia pertanian.",
-    img: "/src/imports/sawah_tawing.jpe",
+    img: "/images/sawah_tawing.jpeg",
     maps: "https://maps.app.goo.gl/kAPp5UtNxH9Nm1Xe9",
   },
 ]
@@ -348,15 +348,15 @@ export const DEFAULT_ARTIKEL: Artikel[] = [
 ]
 
 export const DEFAULT_GALERI: string[] = [
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.11.50_PM.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.11.50_PM__1_.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.11.50_PM__2_.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.11.50_PM__3_.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.12.58_PM.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.12.58_PM__1_.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.12.59_PM.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.12.59_PM__1_.jpeg",
-  "/src/imports/WhatsApp_Image_2026-09-03_at_6.12.59_PM__2_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.11.50_PM.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.11.50_PM__1_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.11.50_PM__2_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.11.50_PM__3_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.12.58_PM.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.12.58_PM__1_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.12.59_PM.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.12.59_PM__1_.jpeg",
+  "/images/WhatsApp_Image_2026-09-03_at_6.12.59_PM__2_.jpeg",
 ]
 
 export interface GaleriItem {
