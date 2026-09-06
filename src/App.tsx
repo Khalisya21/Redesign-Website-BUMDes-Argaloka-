@@ -1477,6 +1477,8 @@ function KetahananSection() {
 
 function ArtikelSection() {
   const { artikel } = useContent()
+  const [selected, setSelected] = useState<null | (typeof artikel)[number]>(null)
+
   return (
     <section
       id="artikel"
@@ -1505,29 +1507,13 @@ function ArtikelSection() {
               Berita & Kegiatan Terbaru
             </h2>
           </div>
-          <button
-            className="hidden sm:flex items-center gap-2 text-sm font-bold hover:opacity-70 transition-opacity"
-            style={{ color: "#6b9e5e" }}
-          >
-            Semua Artikel
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {artikel.map((a) => (
             <article
               key={a.title}
+              onClick={() => setSelected(a)}
               className="rounded-2xl overflow-hidden group cursor-pointer"
               style={{
                 background: "rgba(247,243,235,0.07)",
@@ -1568,6 +1554,10 @@ function ArtikelSection() {
                   {a.excerpt}
                 </p>
                 <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setSelected(a)
+                  }}
                   className="flex items-center gap-1.5 text-xs font-bold hover:opacity-70 transition-opacity"
                   style={{ color: "#6b9e5e" }}
                 >
@@ -1589,6 +1579,56 @@ function ArtikelSection() {
           ))}
         </div>
       </div>
+
+      {/* Popup Baca Selengkapnya */}
+      {selected && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ background: "rgba(0,0,0,0.7)" }}
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-2xl"
+            style={{ background: "#f7f3eb" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative h-64 sm:h-80 bg-[#2d5a1b]">
+              <img
+                src={selected.img}
+                alt={selected.title}
+                className="w-full h-full object-cover"
+              />
+              <button
+                onClick={() => setSelected(null)}
+                className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center text-white text-xl font-bold"
+                style={{ background: "rgba(0,0,0,0.5)" }}
+              >
+                ×
+              </button>
+            </div>
+            <div className="p-6 sm:p-8">
+              <div
+                className="text-xs mb-3 font-medium"
+                style={{ color: "#6b9e5e" }}
+              >
+                {selected.date}
+              </div>
+              <h3
+                className="font-bold text-2xl mb-4"
+                style={{ color: "#1e3d10", fontFamily: "Lora, serif" }}
+              >
+                {selected.title}
+              </h3>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "#5a4535" }}
+              >
+                {selected.excerpt}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
